@@ -361,3 +361,81 @@ body {
     text-align: right;
 }
 
+/* ADD POST */
+
+.add-post {
+    padding: 15px 20px;
+    margin-bottom: 30px;
+
+    background-color: #121212;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+}
+
+.add-post__form {
+    display: flex;
+    align-items: center;
+}
+
+.add-post__textarea {
+    display: block;
+    width: 75%;
+    height: 26px;
+
+    border: none;
+    background: transparent;
+    resize: none;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: white;
+}
+
+.add-post__textarea:focus {
+    outline: none;
+}
+
+.add-post__textarea::placeholder {
+    color: #d2d2d2;
+}
+
+.add-post__form-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+.add-post__file input {
+    display: none;
+}
+
+.add-post__file,
+.add-post__send {
+    display: block;
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color .2s linear;
+}
+
+.add-post__file {
+    background: #EBEBEB url(./assets/images/add-photo-icon.svg) center no-repeat;
+}
+
+.add-post__file:hover {
+    background-color: #c2c2c2;
+}
+
+.add-post__send {
+    margin-left: 15px;
+    background-color: #3137C9;
+}
+
+.add-post__send:hover {
+    background-color: #2529a6;
+
+}

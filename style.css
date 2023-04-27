@@ -774,10 +774,14 @@ ul {
     position: relative;
 }
 
+.form__group--md {
+    margin-bottom: 25px;
+}
+
 .form__control {
     display: block;
     width: 100%;
-    padding: 5px 0;
+    padding: 5px 0 7px;
 
     background: none;
     border: none;
@@ -787,7 +791,6 @@ ul {
 
     font-family: inherit;
     font-size: 14px;
-    line-height: 16px;
 
     color: white
 }
@@ -893,7 +896,7 @@ ul {
 
 .work__content {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     max-width: 290px;
     padding: 25px;
 }
@@ -942,5 +945,37 @@ ul {
     text-align: right;
 }
 
-/* SEARCH */
+/* CABINET */
 
+.cabinet {
+    display: flex;
+}
+
+.cabinet__form {
+    width: 340px;
+}
+
+.cabinet__avatar {
+    flex-grow: 1;
+    padding-left: 110px;
+    }
+
+.cabinet__avatar img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.cabinet__file {
+    line-height: 16px;
+    text-decoration-line: underline;
+
+    color: #107EFF;
+}
+
+.cabinet__file:hover {
+    text-decoration: none;
+}
+
+.cabinet__file input {
+    display: none;
+}

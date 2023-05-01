@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body>
+<body class="no-scroll">
   <div class="page">
     <header class="header">
       <div class="header__left">
@@ -58,6 +58,7 @@
         </form>
       </div>
     </header>
+
     <aside class="sidebar">
       <div class="sidebar__header">
         <img src="./assets/images/sidebar-images.jpg" alt="side bar picture">
@@ -100,6 +101,7 @@
         <button class="btn btn--blue" type="button">Написать мне</button>
       </div>
     </aside>
+
     <main class="main">
       <div class="container">
         <div class="stories">
@@ -270,8 +272,48 @@
             <a class="pagination__link" href="#">&gt;</a>
           </li>
         </ul>
+
+
       </div>
     </main>
+  </div>
+
+  <div class="modal">
+    <div class="modal__content">
+      <button class="modal__close" type="button">
+        <img src="./assets/images/cancel.svg" alt="Закрыть">
+      </button>
+
+      <form class="form" action="/" method="post">
+        <div class="form__group form__group--md ">
+          <input type="text" class="form__control" type="text" placeholder="Ваше имя">
+          <span class="form__line"></span>
+        </div>
+
+        <div class="form__group form__group--md ">
+          <input type="text" class="form__control" type="email" placeholder="Ваш e-mail">
+          <span class="form__line"></span>
+        </div>
+
+        <div class="form__group form__group--md ">
+          <textarea class="form__control form__control--textarea" name="" placeholder="Текст сообщения"></textarea>
+          <span class="form__line"></span>
+        </div>
+
+        <div class="form__footer form__footer--left">
+          <button class="btn btn--blue btn--rounded btn--sm" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <ul class="modal__footer">
+        <li>
+          e-mail: <a href="mailto:igorgrime@gmail.com">igorgrime@gmail.com</a>
+        </li>
+        <li>
+          тел: <a href="tel:+375291432288">+37529143-22-88</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 

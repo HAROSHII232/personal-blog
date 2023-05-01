@@ -425,8 +425,9 @@ body {
 
 .add-post__textarea {
     display: block;
-    width: 75%;
+    flex-grow: 1;
     height: 26px;
+    overflow: hidden;
 
     border: none;
     background: transparent;
@@ -448,7 +449,8 @@ body {
 .add-post__form-actions {
     display: flex;
     justify-content: flex-end;
-    width: 25%;
+    width: 120px;
+    flex-shrink: 0;
 }
 
 .add-post__file input {
@@ -1081,4 +1083,112 @@ ul {
 
 .modal__content .social {
     margin-bottom: 0;
+}
+
+/* BURGER */
+
+.burger {
+    width: 30px;
+    height: 20px;
+    padding: 0;
+
+    background: none;
+    border: none;
+    font-size: 0px;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-50%);
+}
+
+.burger::before,
+.burger:after,
+span {
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+}
+
+.burger:before,
+.burger:after {
+    content: "";
+
+    transition: transform .2s linear;
+}
+
+.burger:before {
+    top: 0;
+}
+
+.burger:after {
+    bottom: 0;
+}
+
+.burger span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .2s linear;
+}
+
+.burger.active span {
+    opacity: 0;
+}
+
+.burger.active::before,
+.burger.active::after {
+    top: 50%;
+}
+
+.burger.active::before {
+    transform: rotate(45deg);
+}
+
+.burger.active::after {
+    transform: rotate(-45deg);
+}
+
+
+/* TABLET ADAPTIVE BP 991px*/
+
+@media (max-width:991px) {
+    .main {
+        padding-left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header__left {
+        width: 40%;
+    }
+
+    .header__right {
+        width: 60%;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+/* MOBILE ADAPTIVE BP 700px*/
+
+@media (max-width:700px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

@@ -1040,11 +1040,15 @@ ul {
 .modal__content {
     width: 100%;
     max-width: 500px;
-    padding: 80px 80px 25px;
+    padding: 80px;
     position: relative;
 
     background-color: #202020;
     border-radius: 5px;
+}
+
+.modal__content--contact {
+    padding-bottom: 25px;
 }
 
 .modal__close {
@@ -1073,4 +1077,8 @@ ul {
 
 .modal__footer li {
     margin: 0 5px;
+}
+
+.modal__content .social {
+    margin-bottom: 0;
 }

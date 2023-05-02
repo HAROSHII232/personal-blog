@@ -33,20 +33,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-.page::after {
-    content: "";
-    display: none;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.9);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
 .page__title {
     margin-bottom: 30px;
 
@@ -1163,20 +1149,20 @@ span {
     transition: opacity .2s linear;
 }
 
-.burger.active span {
+body.show-sidebar .burger span {
     opacity: 0;
 }
 
-.burger.active::before,
-.burger.active::after {
+body.show-sidebar .burger::before,
+body.show-sidebar .burger::after {
     top: 50%;
 }
 
-.burger.active::before {
+body.show-sidebar .burger::before {
     transform: rotate(45deg);
 }
 
-.burger.active::after {
+body.show-sidebar .burger::after {
     transform: rotate(-45deg);
 }
 
@@ -1188,13 +1174,12 @@ span {
         padding-left: 0;
     }
 
-    .page {
+    body.show-sidebar .page {
         position: relative;
     }
-/* разобраться как добавить маску при активации сайдбара */
 
-/*     .sidebar.active.page::after {
-        
+    body.show-sidebar .page::after {
+        content: "";
         display: block;
         width: 100%;
         height: 100%;
@@ -1205,8 +1190,9 @@ span {
         top: 0;
         left: 0;
         z-index: 100;
-    } */
-    
+    }
+
+    /* разобраться как добавить маску при активации сайдбара */
 
     .sidebar {
         display: flex;
@@ -1219,7 +1205,7 @@ span {
         transition: transform .2s linear;
     }
 
-    .sidebar.active {
+    body.show-sidebar .sidebar {
         transform: translateX(0);
     }
 

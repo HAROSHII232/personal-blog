@@ -21,7 +21,7 @@ body {
     color: white;
 }
 
-.no-scroll {
+body.no-scroll {
     overflow: hidden;
 }
 
@@ -31,6 +31,20 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
+}
+
+.page::after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .page__title {
@@ -207,6 +221,10 @@ body {
     object-fit: cover;
 }
 
+.profile {
+    margin-top: -50px;
+}
+
 .profile__avatar {
     display: block;
     width: 100px;
@@ -219,6 +237,11 @@ body {
     border-radius: 50%;
 }
 
+.profile__header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .profile__name {
     font-size: 18px;
     text-align: center;
@@ -228,9 +251,10 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: #DEDEDE;
+}
 
-    text-align: center;
-    margin-bottom: 20px;
+.nav--mobile {
+    display: none;
 }
 
 .social {
@@ -1088,6 +1112,7 @@ ul {
 /* BURGER */
 
 .burger {
+    display: none;
     width: 30px;
     height: 20px;
     padding: 0;
@@ -1163,7 +1188,91 @@ span {
         padding-left: 0;
     }
 
+    .page {
+        position: relative;
+    }
+/* разобраться как добавить маску при активации сайдбара */
+
+/*     .sidebar.active.page::after {
+        
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.9);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    } */
+    
+
     .sidebar {
+        display: flex;
+        flex-direction: column;
+        top: 40px;
+        height: calc(100vh - 40px);
+        overflow: auto;
+
+        transform: translateX(-100%);
+        transition: transform .2s linear;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar__header {
+        height: 100px;
+    }
+
+    .sidebar__content {
+        flex-grow: 1;
+    }
+
+    .sidebar__footer {
+        padding-bottom: 15px;
+    }
+
+    .profile {
+        margin-top: 30px;
+        position: relative;
+
+        border-bottom: 1px solid #1C1C1C;
+    }
+
+    .profile__header {
+        padding-top: 22px;
+        padding-left: 75px;
+        text-align: left;
+
+        font-size: 15px;
+    }
+
+    .profile__avatar {
+        width: 65px;
+        height: 65px;
+
+        margin-left: 0;
+        position: absolute;
+        left: 0;
+    }
+
+    .profile__name {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .profile__prof {
+        font-size: 13px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .profile__text {
         display: none;
     }
 
@@ -1181,6 +1290,59 @@ span {
 
     .nav {
         display: none;
+    }
+
+    .nav--mobile {
+        display: block;
+
+        margin: 30px 0px;
+    }
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    .nav__link {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 16px;
+    }
+
+    .nav__link:hover {
+        background: none;
+    }
+
+    .nav__item:hover .nav__link {
+        background: none;
+    }
+
+    .subnav {
+        padding-left: 10px;
+        position: static;
+        width: 100%;
+
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .subnav__link:hover {
+        background: none;
+    }
+
+    .subnav__link {
+        padding-left: 0;
+        padding-right: 0;
+
+        font-size: 15px;
+    }
+
+    .subnav__link:hover {
+        background-color: none;
+    }
+
+    .burger {
+        display: block;
     }
 }
 

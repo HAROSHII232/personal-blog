@@ -844,6 +844,10 @@ ul {
     margin: 0 auto;
 }
 
+.form__line {
+    background-color: transparent;
+}
+
 .form__footer {
     text-align: center;
 }
@@ -1040,7 +1044,7 @@ ul {
 /* MODAL */
 
 .modal {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -1056,6 +1060,10 @@ ul {
     z-index: 1010;
 }
 
+.modal.show {
+    display: flex;
+}
+
 .modal__content {
     width: 100%;
     max-width: 500px;
@@ -1064,6 +1072,10 @@ ul {
 
     background-color: #202020;
     border-radius: 5px;
+    opacity: 0;
+
+    transform: translateY(-50px);
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 
 .modal__content--contact {
@@ -1076,6 +1088,8 @@ ul {
     top: 20px;
     right: 20px;
     opacity: .5;
+
+    background-color: transparent;
 
     transition: transform .2s linear, opacity .2s linear;
 }
@@ -1100,6 +1114,18 @@ ul {
 
 .modal__content .social {
     margin-bottom: 0;
+}
+
+.modal__content--story {
+    display: block;
+    background: none;
+    width: 420px;
+    height: 580px;
+}
+
+.modal__video {
+    margin: 0 auto;
+    display: block;
 }
 
 /* BURGER */

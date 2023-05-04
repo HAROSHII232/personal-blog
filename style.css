@@ -1210,8 +1210,7 @@ body.show-sidebar .burger::after {
         position: relative;
     }
 
-    body.show-sidebar .page::after {
-        content: "";
+    body.show-sidebar .page__mask {
         display: block;
         width: 100%;
         height: 100%;
@@ -1317,6 +1316,7 @@ body.show-sidebar .burger::after {
 
     .nav__list {
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     .nav__link {
@@ -1336,6 +1336,7 @@ body.show-sidebar .burger::after {
 
     .subnav {
         padding-left: 10px;
+        margin-bottom: 0;
         position: static;
         width: 100%;
 
@@ -1368,6 +1369,10 @@ body.show-sidebar .burger::after {
         padding-bottom: 9px;
 
         font-size: 16px;
+    }
+
+    .modal__content {
+        padding: 50px 25px 25px;
     }
 }
 

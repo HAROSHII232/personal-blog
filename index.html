@@ -44,7 +44,7 @@
           </ul>
         </nav>
 
-        <button class="burger" type="button">
+        <button class="burger" type="button" id="sidebarToggle">
           <span>Открыть навигацию</span>
         </button>
       </div>
@@ -59,12 +59,12 @@
         </nav>
 
         <form class="search" action="./search.html" method="get">
-          <input class="search__input" type="text" placeholder="Поиск по блогу">
+          <input class="search__input" type="text" placeholder="Поиск по блогу"> 
         </form>
       </div>
     </header>
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="sidebar__header">
         <img src="./assets/images/sidebar-images.jpg" alt="side bar picture">
       </div>
@@ -109,17 +109,17 @@
               <a class="nav__link" href="#">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--subnav" href="./post.html">Статьи</a>
+              <a class="nav__link nav__link--subnav" href="#">Статьи</a>
 
               <ul class="subnav">
                 <li>
-                  <a class="subnav__link" href="#">Создание сайтов</a>
+                  <a class="subnav__link" href="./post.html">Создание сайтов</a>
                 </li>
                 <li>
-                  <a class="subnav__link" href="#">Интернет-маркетинг</a>
+                  <a class="subnav__link" href="./post.html">Интернет-маркетинг</a>
                 </li>
                 <li>
-                  <a class="subnav__link" href="#">Продвижение видео</a>
+                  <a class="subnav__link" href="./post.html">Продвижение видео</a>
                 </li>
               </ul>
             </li>

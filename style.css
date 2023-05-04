@@ -1312,7 +1312,7 @@ body.show-sidebar .burger::after {
     .nav--mobile {
         display: block;
 
-        margin: 30px 0px;
+        margin: 10px 0px;
     }
 
     .nav__list {

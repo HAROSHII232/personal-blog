@@ -51,3 +51,13 @@ function closeModal(currentModal) {
         body.classList.remove('no-scroll');
     }, 200);
 }
+
+/* MOBILE NAV */
+
+const burger = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+
+burger.addEventListener('click', event => {
+    document.body.classList.toggle('show-sidebar');
+    document.body.classList.toggle('no-scroll');
+})
